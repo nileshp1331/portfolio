@@ -6,10 +6,9 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* BODY (RCB GRADIENT) */
 body {
   background: linear-gradient(135deg, #0b0b0b, #1a0000, #d40000);
-  color: #ffffff;
+  color: #fff;
 }
 
 /* NAVBAR */
@@ -22,17 +21,26 @@ nav {
   top: 0;
   z-index: 1000;
 
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0,0,0,0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid #c9a227;
 }
 
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .logo img {
-  width: 45px;
+  width: 100px;   /* ✅ FIXED */
+  height: 100px;
   border-radius: 50%;
   border: 2px solid #c9a227;
 }
 
+/* NAV LINKS */
 nav ul {
   display: flex;
   list-style: none;
@@ -43,7 +51,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   transition: 0.3s;
 }
@@ -61,6 +69,7 @@ nav ul li a:hover {
   position: relative;
 }
 
+/* VIDEO */
 .bg-video {
   position: absolute;
   width: 100%;
@@ -68,16 +77,24 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
+/* DARK OVERLAY */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.65);
 }
 
+/* HERO CONTENT */
 .hero-content {
-  text-align: center;
+  position: relative;
   z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;   /* ✅ FIXES OVERLAP */
 }
 
 .hero h1 {
@@ -85,13 +102,14 @@ nav ul li a:hover {
 }
 
 .hero p {
+  font-size: 18px;
   color: #c9a227;
 }
 
 /* BUTTON */
 .btn {
-  margin-top: 20px;
-  padding: 12px 30px;
+  margin-top: 10px;   /* ✅ spacing fix */
+  padding: 14px 30px;
   border-radius: 30px;
   background: linear-gradient(45deg, #d40000, #c9a227);
   color: white;
@@ -121,7 +139,7 @@ h2 {
 .about p {
   margin-top: 15px;
   line-height: 1.7;
-  color: #dddddd;
+  color: #ddd;
 }
 
 /* PROJECTS */
@@ -132,7 +150,7 @@ h2 {
 }
 
 .project-card {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   padding: 20px;
   border-radius: 15px;
   border: 1px solid #c9a227;
@@ -168,7 +186,7 @@ h2 {
 
 .skill,
 .why-box {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
   padding: 12px 22px;
   border-radius: 25px;
   border: 1px solid #c9a227;
@@ -193,7 +211,6 @@ h2 {
   gap: 20px;
 }
 
-/* BUTTONS */
 .whatsapp,
 .linkedin {
   padding: 12px 22px;
@@ -201,7 +218,6 @@ h2 {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 .whatsapp {
@@ -210,11 +226,6 @@ h2 {
 
 .linkedin {
   background: #0077b5;
-}
-
-.whatsapp:hover,
-.linkedin:hover {
-  transform: scale(1.1);
 }
 
 /* FOOTER */
