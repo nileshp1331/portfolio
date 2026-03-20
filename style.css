@@ -31,8 +31,8 @@ nav {
 }
 
 .logo img {
-  width: 45px;
-  height: 45px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 }
 
@@ -120,12 +120,21 @@ section {
 .about {
   max-width: 900px;
   margin: auto;
+  padding: 40px 20px;
+  text-align: center;
 }
 
+/* Heading spacing */
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+/* Paragraph spacing */
 .about p {
-  margin-top: 15px;
+  margin-bottom: 20px;   /* GAP BETWEEN LINES */
+  line-height: 1.8;      /* LINE SPACING */
   color: #cbd5f5;
-  line-height: 1.7;
 }
 
 /* PROJECTS */
@@ -171,7 +180,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .skill {
